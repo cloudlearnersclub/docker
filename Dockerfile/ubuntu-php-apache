@@ -1,3 +1,6 @@
+# Create a Dockerfile and paste the following
+#nano Dockerfile
+
 FROM ubuntu
 ENV TZ=Asia/Kolkata
 RUN apt-get update
