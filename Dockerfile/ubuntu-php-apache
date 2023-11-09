@@ -1,0 +1,25 @@
+FROM ubuntu
+ENV TZ=Asia/Kolkata
+RUN apt-get update
+RUN apt-get install -y tzdata
+RUN apt-get install -y apache2
+RUN apt-get install -y php
+CMD ["apache2ctl", "-D", "Foreground"]
+
+# How to create image
+#docker build -t ubunu-apache-php:1.0 .
+
+# Verify if docker image is created
+#docker images
+
+# Run a container from this image
+#docker run -d ubunu-apache-php:1.0
+
+# get the container ID
+#docker ps
+
+# Attach to this container
+#docker exec -it <container id from above step> /bin/bash
+
+# Exit the container
+#Ctrl+P and Ctrl+Q :press them in that order
